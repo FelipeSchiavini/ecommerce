@@ -6,7 +6,7 @@ import { IProviderService, Product, ProviderName, SecondProviderProduct } from "
 export class SecondProviderService implements IProviderService {
   private secondProviderApi = axios.create({
     baseURL: process.env.SECOND_PROVIDER_URL,
-    timeout: 8000,
+    timeout: 2500,
   });
 
   async getAll() : Promise<Product[]>{

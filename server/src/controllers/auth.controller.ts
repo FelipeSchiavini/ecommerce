@@ -32,7 +32,6 @@ export class AuthController {
   }
 
   @Post("/login")
- // @UseBefore(authorize())
   async login(@Body() data: data, @Res() res : Response) {
     const { email, password } = loginBody.parse(JSON.parse(data));
     const user = await findUserByEmail(email)

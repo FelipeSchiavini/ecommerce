@@ -14,11 +14,12 @@ export class ProductController {
   async getAllProducts(@QueryParam("page") page: number): Promise<any> {
 
     const firstProviderData = await Container.get(FirstProviderService).getAll()
-    //const secondProviderData = await Container.get(FirstProviderService).getAll()
-    return pagination(_.concat(firstProviderData), page)
+    const secondProviderData = await Container.get(FirstProviderService).getAll()
+    return pagination(_.concat(firstProviderData, secondProviderData), page)
   }
 
   @Get('/products/:productId')
+  @UseBefore(authorize())
   async getOne(@Param("productId") productId: string, @Body() data : string) {
     const { name } = JSON.parse(data) as {name: ProviderName}
     if(name == ProviderName.First) {
