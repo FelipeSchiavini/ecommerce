@@ -13,11 +13,10 @@ export const authorize = (): ((_request: Request, response: Response, next: (err
       }
     }
     try {
-      const autorized = jwt.verify(headers['auth-token'], process.env.TOKEN_SECRET as string)
-      console.log("🚀 ~ file: auth.middleware.ts:17 ~ return ~ autorized", autorized)
+      jwt.verify(headers['auth-token'], process.env.TOKEN_SECRET as string)
       next()
-    } catch(e){
-      console.log("🚀 ERROR: invalid token! authorize 17", e)
+    } catch(error){
+      console.log("🚀 ERROR: invalid token! authorize 17", error)
       return {
         message: "Token invalid!"
       }

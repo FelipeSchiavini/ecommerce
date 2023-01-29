@@ -6,7 +6,7 @@ import { FirstProviderProduct, IProviderService, Product, ProviderName } from ".
 export class FirstProviderService implements IProviderService {
   private firstProviderApi = axios.create({
     baseURL: process.env.FIRST_PROVIDER_URL,
-    timeout: 18000,
+    timeout: 2500,
   });
 
   async getAll() : Promise<Product[]>{
@@ -33,7 +33,6 @@ export class FirstProviderService implements IProviderService {
 }
 
 const mapFirstProviderDataToProduct = (productList: FirstProviderProduct[] ): Product[] => {
-  console.log("🚀 ~ file: first-provider.service.ts:36 ~ mapFirstProviderDataToProduct ~ productList", productList)
   return productList.map((product) => {
     return {
       id: product.id,

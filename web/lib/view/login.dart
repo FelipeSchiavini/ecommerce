@@ -4,17 +4,20 @@ import 'package:web/style/palette-colors.dart';
 
 import '../utils/validators.dart';
 
-class Login extends StatefulWidget {
+class Login extends StatefulWidget {  
   const Login({super.key});
-
+  
+  
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  
   final TextEditingController _controllerEmail = TextEditingController();
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerPassword = TextEditingController();
+  @override
   
   bool _userRegister = false;
 
