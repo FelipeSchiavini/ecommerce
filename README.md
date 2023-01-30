@@ -1,5 +1,6 @@
 # ecommerce
-e-commerce com front-end com flutter e backend em Nodejs
+Is a ecommerce store built from scratch in Flutter and Express.
+
 
 #### server
 go to folder /server
