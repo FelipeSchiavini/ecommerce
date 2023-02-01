@@ -15,6 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   getNumberOfColumns (double pageWidth) {
+    // todo: keep the page breakpoints in a constant shared between components
     if(pageWidth <= 600) {
       return 2;
     }
@@ -42,6 +43,7 @@ class _HomeState extends State<Home> {
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
               children: [
+                // todo: get this from the server
                 ProductCard( "muito bom para andar de skate e bike", "Nome do objeto","110.00" ,["http://placeimg.com/640/480/business"] )
               ],
             ),

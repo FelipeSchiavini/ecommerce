@@ -47,7 +47,7 @@ export class AuthController {
     if(!isValidPassword) {
       return {
         status: 404,
-        message: "Email or password does not found!"
+        message: "Email or password was not found!"
       } 
     }
 

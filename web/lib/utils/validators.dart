@@ -1,14 +1,11 @@
 bool emailValidator (String email) {
-  bool emailIsValid =  RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(email);
-  return emailIsValid;
+  return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(email);
 }
 
 bool passwordValidator(String password) {
-  bool passwordIsValid = password.isNotEmpty && password.length >= 6;
-  return passwordIsValid;
+  return password.isNotEmpty && password.length >= 6;
 }
 
 bool nameValidator(String name) {
-  bool nameIsValid = name.isNotEmpty && name.length >= 3;
-  return nameIsValid;
+  return name.isNotEmpty && name.length >= 3;
 }

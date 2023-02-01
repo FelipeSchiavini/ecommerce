@@ -4,6 +4,7 @@
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 
+// todo: rename file to product-card
 class ProductCard extends StatelessWidget {
   String description;
   String name;
@@ -11,7 +12,7 @@ class ProductCard extends StatelessWidget {
   String price;
 
   ProductCard(this.description, this.name, this.price, this.image);
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,6 +25,7 @@ class ProductCard extends StatelessWidget {
       padding: EdgeInsets.all(16),
       child: Column(
         children: [
+          // todo: fix indentation
           Expanded(
             flex: 8,
             child: Image.network('https://picsum.photos/250?image=9'),
@@ -44,6 +46,7 @@ class ProductCard extends StatelessWidget {
             ),
             Expanded(
             flex: 1,
+            // todo: create function to show price
             child: Text("R\$ ${this.price}",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),

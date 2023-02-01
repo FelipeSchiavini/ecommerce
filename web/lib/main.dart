@@ -26,6 +26,7 @@ class _AppState extends State<App> {
   }
 }
 
+// todo: remove unused code
 //class HomePage extends StatefulWidget {
 //  List<Item> items = [];
 //  

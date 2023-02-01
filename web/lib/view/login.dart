@@ -4,21 +4,21 @@ import 'package:web/style/palette-colors.dart';
 
 import '../utils/validators.dart';
 
-class Login extends StatefulWidget {  
+class Login extends StatefulWidget {
   const Login({super.key});
-  
-  
+
+
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
-  
+
   final TextEditingController _controllerEmail = TextEditingController();
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerPassword = TextEditingController();
   @override
-  
+
   bool _userRegister = false;
 
   _validate() async {
@@ -26,6 +26,7 @@ class _LoginState extends State<Login> {
     String email = _controllerEmail.text;
     String password = _controllerPassword.text;
 
+    // TODO: unused variables?
     bool isValidEmail = emailValidator(email);
     bool passwordIsValid = passwordValidator(password);
     bool nameIsValid = nameValidator(name);
@@ -50,8 +51,7 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.all(16),
               child: Card(
                 elevation: 6,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Container(
                   width: 500,
                   height: _userRegister ? 450 : 400,
@@ -65,7 +65,7 @@ class _LoginState extends State<Login> {
                         keyboardType: TextInputType.name,
                         controller: _controllerName,
                         decoration: const InputDecoration(
-                          hintText: "fulano de tal",
+                          hintText: "fulano de tal", // todo: seriously?
                           labelText: "Nome",
                           suffixIcon: Icon(Icons.person_2_outlined),
                         ),
@@ -85,6 +85,7 @@ class _LoginState extends State<Login> {
                       controller: _controllerPassword,
                       obscureText: true,
                       decoration: const InputDecoration(
+                          // todo: very bad password!
                           hintText: "123456",
                           labelText: "Senha",
                           suffixIcon: Icon(Icons.lock_outline)),
