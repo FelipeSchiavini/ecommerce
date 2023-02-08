@@ -9,7 +9,7 @@ export const authorize = (): ((_request: Request, response: Response, next: (err
     const headers = request.headers as Headers
     if(!headers?.['auth-token']){
       return {
-        message: "Route Authenticad"
+        message: "Route Authenticated"
       }
     }
     try {
@@ -17,9 +17,9 @@ export const authorize = (): ((_request: Request, response: Response, next: (err
       console.log("🚀 ~ file: auth.middleware.ts:17 ~ return ~ autorized", autorized)
       next()
     } catch(e){
-      console.log("🚀 ERROR: invalid token! authorize 17", e)
+      console.log("🚀 ERROR: invalid token! autorized 17", e)
       return {
-        message: "Token invalid!"
+        message: "the Token is invalid!"
       }
     }    
   };

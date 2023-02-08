@@ -55,7 +55,6 @@ export class AuthController {
     const token = jwt.sign({id: user.id}, process.env.TOKEN_SECRET as string)
     return {
       access_token: token,
-      token_type: 'Bearer',
     };
 
 
